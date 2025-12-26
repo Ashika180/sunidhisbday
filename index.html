@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sunidhi 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Bitcount+Prop+Single+Ink:wght@100..900&family=Sree+Krushnadevaraya&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  height:100vh;
+  overflow:hidden;
+  background:radial-gradient(circle at top,#fce4ff,#e8c6ff,#c69fff,#1b1220);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-family:"DM Sans",sans-serif;
+}
+
+/* Layout */
+.stage{
+  width:min(1560px, 98vw);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:22px;
+  padding:14px;
+  position:relative;
+  z-index:5;
+}
+
+/* Side carousels */
+.side-carousel{
+  flex:1;
+  height:580px;
+  min-width:320px;
+  max-width:460px;
+  border-radius:20px;
+  background:rgba(24,16,33,0.75);
+  box-shadow:0 0 20px rgba(0,0,0,.6);
+  overflow:hidden;
+}
+.side-carousel-inner{height:100%;position:relative;}
+.side-slide{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  transform:scale(1.03);
+  transition:opacity .9s ease-in-out, transform 1.2s ease-in-out;
+}
+.side-slide.active{opacity:1;transform:scale(1);}
+
+/* Center card */
+:root{
+  --borderPad:6px;
+  --grad:linear-gradient(120deg,#ff2bb7,#ff79d6,#a26cff,#5cf6ff,#ffffff,#ffb0dd,#ff2bb7);
+}
+.card-wrapper{
+  border-radius:30px;
+  padding:var(--borderPad);
+  background:var(--grad);
+  background-size:320% 320%;
+  animation:borderGlow 4.2s linear infinite;
+  box-shadow:0 0 28px rgba(255,85,200,.55);
+}
+@keyframes borderGlow{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+.card{
+  background:rgba(24,16,33,0.92);
+  padding:34px;
+  border-radius:24px;
+  text-align:center;
+  width:460px;
+}
+
+/* Avatar (GIPHY FIX) */
+.avatar{
+  width:180px;
+  height:180px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  overflow:hidden;
+  border:4px solid #ffb0dd;
+  box-shadow:0 0 30px rgba(255,128,199,1);
+}
+.avatar iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  border-radius:50%;
+}
+
+/* Text */
+.title{
+  font-family:"Jacquard 24";
+  font-size:3.6rem;
+  text-shadow:0 0 20px #ff61c9,0 0 50px #ff13c0;
+}
+.recipient{
+  font-family:"Bitcount Prop Single Ink", system-ui;
+  font-size:2.4rem;
+  font-weight:bold;
+  text-shadow:0 0 10px #ff9ce9;
+}
+.msg{
+  margin:16px 0 28px;
+  padding:16px 22px;
+  font-family:"Baloo 2",cursive;
+  font-size:1.4rem;
+  border-radius:18px;
+  background:rgba(5,0,12,0.88);
+  border:2px solid #ffb0dd;
+}
+
+/* Button */
+.btn{
+  background:black;
+  border:2px solid #ffb0dd;
+  padding:12px 32px;
+  border-radius:50px;
+  cursor:pointer;
+  color:white;
+  font-size:1.15rem;
+}
+
+/* Balloons */
+.balloon{
+  position:fixed;
+  bottom:-140px;
+  border-radius:50%;
+  opacity:.88;
+  z-index:1;
+  pointer-events:none;
+  animation:rise linear infinite;
+}
+.balloon::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:-64px;
+  transform:translateX(-50%);
+  width:2px;
+  height:64px;
+  background:rgba(255,255,255,.85);
+}
+@keyframes rise{
+  100%{transform:translateY(-140vh);}
+}
+
+/* Responsive */
+@media (max-width:1200px){
+  .side-carousel{display:none;}
+}
+</style>
+</head>
+
+<body>
+
+<script>
+const balloonColors=["#000","#ff80c7","#a26cff","#d08dff","#3b2a4d","#ffb0dd"];
+for(let i=0;i<26;i++){
+  const b=document.createElement("div");
+  b.className="balloon";
+  b.style.left=Math.random()*100+"vw";
+  const w=48+Math.random()*34;
+  b.style.width=w+"px";
+  b.style.height=(w*1.45)+"px";
+  b.style.background=balloonColors[Math.floor(Math.random()*balloonColors.length)];
+  b.style.animationDuration=(7+Math.random()*7)+"s";
+  document.body.appendChild(b);
+}
+</script>
+
+<div class="stage">
+
+  <!-- LEFT -->
+  <div class="side-carousel">
+    <div class="side-carousel-inner" id="leftCarousel">
+      <img class="side-slide" src="WhatsApp Image 2025-12-11 at 6.21.06 PM.jpeg">
+      <img class="side-slide" src="IMG_2349 2.jpg">
+      <img class="side-slide" src="IMG_3547 2.jpg">
+      <img class="side-slide" src="IMG_3724 2.jpg">
+    </div>
+  </div>
+
+  <!-- CENTER -->
+  <div class="card-wrapper">
+    <div class="card">
+
+      <!-- ✅ GIPHY CIRCLE -->
+      <div class="avatar">
+        <iframe src="https://giphy.com/embed/jwzNDFOjiUBPEUJC6G"
+                allowfullscreen></iframe>
+      </div>
+
+      <div class="title">Happy Birthday</div>
+      <div class="recipient">SUNIDHI 💜</div>
+
+      <p class="msg" id="msg">
+        Roses are red, violets are blue, my world is brighter because I have you 💜
+      </p>
+
+      <button class="btn" id="action">✨ touch me (i mean click me) ✨</button>
+    </div>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="side-carousel">
+    <div class="side-carousel-inner" id="rightCarousel">
+      <img class="side-slide" src="IMG_2349 2.jpg">
+      <img class="side-slide" src="IMG_3547 2.jpg">
+      <img class="side-slide" src="IMG_3724 2.jpg">
+      <img class="side-slide" src="IMG_3732 2.jpg">
+      <img class="side-slide" src="IMG_3734 2.jpg">
+      <img class="side-slide" src="IMG_3743 2.jpg">
+      <img class="side-slide" src="WhatsApp Image 2025-12-11 at 6.21.06 PM.jpeg">
+      <img class="side-slide" src="1.jpeg">
+      <img class="side-slide" src="2.jpeg">
+      <img class="side-slide" src="3.jpeg">
+      <img class="side-slide" src="4.jpeg">
+      <img class="side-slide" src="5.jpeg">
+      <img class="side-slide" src="6.jpeg">
+    </div>
+  </div>
+
+</div>
+
+<script>
+function startRandomCarousel(id, speed){
+  const slides=[...document.querySelectorAll(`#${id} .side-slide`)];
+  let order=[...slides.keys()].sort(()=>Math.random()-0.5);
+  let i=-1;
+  setInterval(()=>{
+    slides.forEach(s=>s.classList.remove("active"));
+    i=(i+1)%order.length;
+    slides[order[i]].classList.add("active");
+  },speed);
+}
+startRandomCarousel("leftCarousel",2600);
+startRandomCarousel("rightCarousel",3200);
+
+document.getElementById("action").onclick=()=>{
+  const lines=[
+    "Roses are red, violets are fine, you be the 6, i'll be the 9.",
+    "Roses are red, violets are blue, i get wet just looking at you.",
+    "Roses are red, violets are blue, my world is brighter because i have you.",
+    "Roses are red, violets are blue, and i think i'm in love with you."
+  ];
+  document.getElementById("msg").textContent =
+    lines[Math.floor(Math.random()*lines.length)];
+};
+</script>
+
+</body>
+</html>
